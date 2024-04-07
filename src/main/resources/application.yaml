@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /kafka-connect
+
+spring:
+  application:
+    name: kafka-connect-example
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: rufet
+    url: jdbc:postgresql://localhost:5432/rufet
+    username: rufet
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
